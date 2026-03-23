@@ -18,6 +18,16 @@ function XIcon({ className }: { className?: string }) {
   );
 }
 
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="12" cy="12" r="4.1" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
+    </svg>
+  );
+}
+
 const pages = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
@@ -46,7 +56,7 @@ export function SiteFooter() {
             Ready to get started
           </h2>
           <p className="mt-4 text-base text-brand-primary/55 md:text-lg">
-            Write to us anytime — we&apos;ll get back to you soon. No spam, no pressure.
+            Write to us anytime — we&apos;ll get back to you soon.
           </p>
           <div className="mt-8">
             <Link
@@ -63,7 +73,7 @@ export function SiteFooter() {
       {/* Footer card */}
       <div className="px-6 pb-12 pt-2">
         <div className="mx-auto max-w-6xl rounded-[1.75rem] border border-black/[0.06] bg-brand-canvas/90 p-8 shadow-[0_12px_40px_rgba(150,126,111,0.06)] md:p-10">
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_1fr_1fr] lg:gap-12">
+          <div className="grid gap-10 md:grid-cols-[1.1fr_1fr_1fr] md:gap-10 lg:gap-12">
             <div>
               <Link href="/" className="inline-flex items-center gap-2.5">
                 <Image
@@ -99,6 +109,15 @@ export function SiteFooter() {
                   aria-label="X"
                 >
                   <XIcon className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-white transition-opacity hover:opacity-85"
+                  aria-label="Instagram"
+                >
+                  <InstagramIcon className="h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -145,9 +164,7 @@ export function SiteFooter() {
               <p>
                 © {year} Friendly Cat Group. All rights reserved.
               </p>
-              <p>
-                Built with <span className="font-medium text-brand-primary/60">Next.js</span>
-              </p>
+              <p>Founded in March 2026</p>
             </div>
           </div>
         </div>

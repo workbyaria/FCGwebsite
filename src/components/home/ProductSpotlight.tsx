@@ -121,9 +121,9 @@ export function ProductSpotlight() {
       className="border-t border-black/[0.06] bg-white px-6 py-20 md:py-28"
       aria-labelledby="product-spotlight-heading"
     >
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
         {/* Left: UI mock */}
-        <Reveal className="order-2 lg:order-1">
+        <Reveal>
           <div className="rounded-[1.75rem] bg-gradient-to-b from-brand-secondary/55 via-brand-secondary/25 to-brand-tertiary/50 p-5 shadow-[0_24px_80px_rgba(150,126,111,0.12)] md:p-7">
             <div className="overflow-hidden rounded-2xl border border-black/[0.06] bg-white shadow-sm">
               <div className="border-b border-black/[0.06] p-4 md:p-5">
@@ -192,7 +192,7 @@ export function ProductSpotlight() {
         </Reveal>
 
         {/* Right: copy */}
-        <Reveal className="order-1 lg:order-2" delay={0.06}>
+        <Reveal delay={0.06}>
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-brand-primary/38">
             Project management
           </p>
