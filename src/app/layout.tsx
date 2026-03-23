@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} font-sans`}>
-      <body className="bg-white font-sans font-normal text-brand-primary">
+      <body className="bg-white font-sans font-normal text-brand-primary overflow-x-hidden">
         <SmoothScroll>
           <SiteHeader />
           <div className="flex min-h-dvh flex-col pt-[4.75rem] md:pt-[5.25rem]">

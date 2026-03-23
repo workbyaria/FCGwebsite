@@ -118,10 +118,10 @@ export function ProductSpotlight() {
   return (
     <section
       id="product"
-      className="border-t border-black/[0.06] bg-white px-6 py-20 md:py-28"
+      className="border-t border-black/[0.06] bg-white px-6 py-16 md:py-20"
       aria-labelledby="product-spotlight-heading"
     >
-      <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 md:grid-cols-2 md:gap-10 lg:gap-14">
         {/* Left: UI mock */}
         <Reveal>
           <div className="rounded-[1.75rem] bg-gradient-to-b from-brand-secondary/55 via-brand-secondary/25 to-brand-tertiary/50 p-5 shadow-[0_24px_80px_rgba(150,126,111,0.12)] md:p-7">
@@ -149,8 +149,8 @@ export function ProductSpotlight() {
                 <div className="mb-2 rounded-lg bg-brand-secondary/35 px-3 py-2 text-xs font-semibold text-brand-primary/85">
                   Ongoing · 5
                 </div>
-                <div className="overflow-x-auto">
-                  <table className="w-full min-w-[320px] text-left text-[11px] md:text-xs">
+                <div className="overflow-x-auto overflow-y-hidden">
+                  <table className="w-full min-w-0 text-left text-[11px] md:text-xs">
                     <thead>
                       <tr className="text-brand-primary/45">
                         <th className="pb-2 pr-2 font-medium">Project</th>
@@ -208,10 +208,10 @@ export function ProductSpotlight() {
           </p>
           <div className="mt-8">
             <Link
-              href="/software"
+              href="/products"
               className="inline-flex rounded-full bg-brand-primary px-7 py-3 text-sm font-semibold text-white shadow-sm transition-[transform,box-shadow] duration-200 ease-apple hover:bg-brand-primary/90 active:scale-[0.99]"
             >
-              Explore Software
+              Explore Product
             </Link>
           </div>
           <div className="mt-10 grid grid-cols-2 gap-3 sm:max-w-md">

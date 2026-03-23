@@ -34,7 +34,7 @@ export function FeaturesSection() {
   return (
     <section
       id="features"
-      className="border-t border-black/[0.06] bg-brand-canvas px-6 py-20 md:py-28"
+      className="border-t border-black/[0.06] bg-brand-canvas px-6 py-16 md:py-20"
       aria-labelledby="features-heading"
     >
       <div className="mx-auto max-w-6xl">
@@ -50,7 +50,7 @@ export function FeaturesSection() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 md:gap-7">
           {/* Left card */}
           <Reveal>
             <article className="flex h-full flex-col rounded-[1.75rem] bg-brand-tertiary/70 p-6 shadow-[0_16px_48px_rgba(150,126,111,0.08)] md:p-8">

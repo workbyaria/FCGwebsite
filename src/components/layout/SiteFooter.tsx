@@ -50,7 +50,7 @@ export function SiteFooter() {
   return (
     <footer className="mt-auto border-t border-black/[0.06] bg-white">
       {/* CTA */}
-      <div className="bg-brand-secondary/10 px-6 py-16 md:py-20">
+      <div className="bg-brand-secondary/10 px-6 py-12 md:py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-brand-primary md:text-4xl">
             Ready to get started
@@ -65,14 +65,13 @@ export function SiteFooter() {
             >
               Contact us
             </Link>
-            <p className="mt-4 text-xs text-brand-primary/40">{CONTACT_EMAIL}</p>
           </div>
         </div>
       </div>
 
       {/* Footer card */}
-      <div className="px-6 pb-12 pt-2">
-        <div className="mx-auto max-w-6xl rounded-[1.75rem] border border-black/[0.06] bg-brand-canvas/90 p-8 shadow-[0_12px_40px_rgba(150,126,111,0.06)] md:p-10">
+      <div className="px-6 pb-12 pt-16">
+        <div className="mx-auto max-w-6xl rounded-[1.75rem] border border-black/[0.06] bg-brand-canvas/90 p-7 shadow-[0_12px_40px_rgba(150,126,111,0.06)] md:p-8">
           <div className="grid gap-10 md:grid-cols-[1.1fr_1fr_1fr] md:gap-10 lg:gap-12">
             <div>
               <Link href="/" className="inline-flex items-center gap-2.5">
@@ -88,8 +87,7 @@ export function SiteFooter() {
                 </span>
               </Link>
               <p className="mt-4 max-w-sm text-sm leading-relaxed text-brand-primary/55">
-                Technology for humanity — thoughtful tools for teams who care about clarity, calm, and
-                impact.
+                Technology for humanity — Turning complexity into user-friendly tools.
               </p>
               <div className="mt-6 flex gap-3">
                 <a
@@ -160,11 +158,10 @@ export function SiteFooter() {
           </div>
 
           <div className="mt-10 border-t border-black/[0.08] pt-8">
-            <div className="flex flex-col gap-3 text-xs text-brand-primary/45 md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-col items-center text-xs text-brand-primary/45">
               <p>
                 © {year} Friendly Cat Group. All rights reserved.
               </p>
-              <p>Founded in March 2026</p>
             </div>
           </div>
         </div>

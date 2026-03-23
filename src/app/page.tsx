@@ -9,7 +9,7 @@ export default function Home() {
     <main className="bg-white">
       {/* The Breath */}
       <section
-        className="flex min-h-[calc(100dvh-4.75rem)] flex-col items-center justify-center px-6 py-12 md:min-h-[calc(100dvh-5.25rem)]"
+        className="flex min-h-[calc(100dvh-4.75rem)] flex-col items-center justify-center px-6 py-10 md:min-h-[calc(100dvh-5.25rem)]"
         aria-label="The Breath"
       >
         <Reveal className="text-center">
@@ -34,7 +34,7 @@ export default function Home() {
       {/* The Verticals */}
       <section
         id="verticals"
-        className="scroll-mt-28 flex min-h-[100dvh] flex-col items-center justify-center px-6 py-24 md:scroll-mt-32"
+        className="scroll-mt-28 flex min-h-[100dvh] flex-col items-center justify-center px-6 py-20 md:scroll-mt-32"
         aria-label="The Verticals"
       >
         <RevealStagger className="flex w-full max-w-4xl flex-col items-center gap-3 md:gap-5">
