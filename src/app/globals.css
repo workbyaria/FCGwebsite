@@ -1,0 +1,16 @@
+@import "lenis/dist/lenis.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+    scroll-padding-top: 5.5rem;
+  }
+
+  ::selection {
+    @apply bg-brand-secondary/40 text-brand-primary;
+  }
+}
