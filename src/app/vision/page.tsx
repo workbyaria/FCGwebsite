@@ -3,19 +3,19 @@ import { Reveal } from "@/components/motion/Reveal";
 const VALUES = [
   {
     title: "Execution",
-    body: "We turn ideas into practical tools people can use immediately.",
+    body: "Execution is the foundation of everything we believe in. Ideas only matter when they become real, useful tools for daily life and work.",
   },
   {
     title: "Creativity",
-    body: "We imagine new and simple ways to solve everyday problems.",
+    body: "Creativity begins with observation. We turn everyday moments and small frustrations into simpler, better ways to solve real problems.",
   },
   {
     title: "Resilience",
-    body: "We keep building through uncertainty, feedback, and hard seasons.",
+    body: "Resilience means continuing to build, adapt, and improve through uncertainty. We design with flexibility so our tools stay useful in both stable and difficult times.",
   },
   {
     title: "Consistency",
-    body: "Meaningful progress comes from showing up and improving every day.",
+    body: "Consistency means staying true to our original intention. Long-term trust is built through steady effort, reflection, and refinement over time.",
   },
 ] as const;
 
@@ -38,7 +38,7 @@ export default function VisionPage() {
             Vision
           </p>
           <h1 className="mt-4 max-w-4xl text-balance text-4xl font-semibold tracking-tight text-brand-primary md:text-6xl">
-            Technology should reduce complexity, not create more of it.
+            Better technology for people and the world.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-brand-primary/60 md:text-lg">
             Our vision is to make life simpler, kinder, and more human through technology.
@@ -68,31 +68,10 @@ export default function VisionPage() {
           </div>
         </div>
 
-        {/* 3) Philosophy */}
-        <div className="mt-10 grid gap-5 md:mt-12 md:grid-cols-2 md:gap-6">
+        {/* 3) Impact & future */}
+        <div className="mt-10 md:mt-12">
           <Reveal>
-            <article className="h-full rounded-3xl border border-black/[0.07] bg-brand-canvas/65 p-5 md:p-6">
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-primary/40">
-                Philosophy
-              </p>
-              <p className="mt-3 text-pretty text-base leading-relaxed text-brand-primary/68">
-                We believe business is ultimately about people. Technology should support clarity,
-                emotional well-being, and better decisions.
-              </p>
-              <p className="mt-3 text-pretty text-base leading-relaxed text-brand-primary/68">
-                Even in difficult conditions, there is always something to learn, build, and
-                improve.
-              </p>
-              <p className="mt-3 text-pretty text-base leading-relaxed text-brand-primary/68">
-                We stay grounded, stay kind, and stay true to our intention: creating tools that
-                genuinely make life easier.
-              </p>
-            </article>
-          </Reveal>
-
-          {/* 4) Impact & future */}
-          <Reveal delay={0.06}>
-            <article className="h-full rounded-3xl border border-black/[0.07] bg-gradient-to-br from-brand-secondary/35 via-white to-brand-tertiary/50 p-5 shadow-[0_12px_36px_rgba(150,126,111,0.08)] md:p-6">
+            <article className="rounded-3xl border border-black/[0.07] bg-gradient-to-br from-brand-secondary/35 via-white to-brand-tertiary/50 p-5 shadow-[0_12px_36px_rgba(150,126,111,0.08)] md:p-6">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand-primary/40">
                 Impact & Future
               </p>
@@ -111,7 +90,7 @@ export default function VisionPage() {
           </Reveal>
         </div>
 
-        {/* 5) Closing line */}
+        {/* 4) Closing line */}
         <Reveal className="mt-10 md:mt-12">
           <div className="rounded-3xl border border-black/[0.07] bg-white p-6 text-center shadow-[0_10px_32px_rgba(150,126,111,0.07)] md:p-8">
             <p className="text-balance text-2xl font-semibold tracking-tight text-brand-primary md:text-3xl">

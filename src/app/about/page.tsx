@@ -1,8 +1,34 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { motion } from "framer-motion";
 import { Reveal } from "@/components/motion/Reveal";
 
 export default function AboutPage() {
+  const ease = [0.25, 0.1, 0.25, 1] as const;
+
+  function SoftParagraph({
+    children,
+    className,
+    delay = 0,
+  }: {
+    children: React.ReactNode;
+    className?: string;
+    delay?: number;
+  }) {
+    return (
+      <motion.p
+        className={className}
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-10% 0px -8% 0px" }}
+        transition={{ duration: 0.5, delay, ease }}
+      >
+        {children}
+      </motion.p>
+    );
+  }
+
   return (
     <main className="relative overflow-hidden bg-white px-6 py-20 md:py-24">
       <div
@@ -15,16 +41,6 @@ export default function AboutPage() {
       />
 
       <div className="relative z-10 mx-auto max-w-6xl">
-        <Reveal>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-sm font-medium text-brand-primary/60 transition-colors hover:text-brand-primary/90"
-          >
-            <span aria-hidden>←</span>
-            Home
-          </Link>
-        </Reveal>
-
         <div className="mt-12 md:mt-14">
           <Reveal className="max-w-4xl">
             <p className="text-[0.68rem] font-semibold uppercase tracking-[0.25em] text-brand-primary/40">
@@ -34,8 +50,7 @@ export default function AboutPage() {
               Friendly Cat Group
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-brand-primary/60 md:text-lg">
-              We build calm, practical technology that turns complexity into friendly daily
-              actions.
+              We build technology tools, while also supporting sustainability and charity.
             </p>
           </Reveal>
 
@@ -60,61 +75,41 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <p className="text-pretty text-base leading-relaxed text-brand-primary/68">
-                  Friendly Cat Group started when I was a junior in college. But deep down, I
-                  knew what I truly loved was sitting in front of my computer and making things.
-                </p>
-                <p className="mt-4 text-pretty text-base leading-relaxed text-brand-primary/68">
+                <SoftParagraph className="text-pretty text-base leading-relaxed text-brand-primary/68" delay={0.03}>
+                  Friendly Cat Group started when I was a junior in college.
+                </SoftParagraph>
+                <SoftParagraph className="mt-4 text-pretty text-base leading-relaxed text-brand-primary/68" delay={0.08}>
+                  But deep inside, I knew what I loved was sitting in front of my computer and
+                  creating things.
+                </SoftParagraph>
+                <SoftParagraph className="mt-4 text-pretty text-base leading-relaxed text-brand-primary/68" delay={0.13}>
                   I have always enjoyed turning random ideas in my head into real visions.
-                  Sometimes they become paintings or physical products. Sometimes they turn into
-                  small tools that help people solve everyday problems.
-                </p>
+                </SoftParagraph>
+                <SoftParagraph className="mt-4 text-pretty text-base leading-relaxed text-brand-primary/68" delay={0.18}>
+                  Sometimes they become paintings or physical products.
+                </SoftParagraph>
+                <SoftParagraph className="mt-4 text-pretty text-base leading-relaxed text-brand-primary/68" delay={0.23}>
+                  Sometimes they turn into small tools that help people solve everyday problems.
+                </SoftParagraph>
               </article>
             </Reveal>
 
             <Reveal>
-              <article className="h-full rounded-3xl border border-black/[0.07] bg-brand-canvas/70 p-5 shadow-[0_12px_36px_rgba(150,126,111,0.06)] md:p-6">
-                <div className="mb-5 rounded-2xl bg-gradient-to-br from-brand-secondary/55 via-white to-brand-tertiary/60 p-4 ring-1 ring-black/[0.05]">
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-brand-primary/40">
-                    Core Belief
-                  </p>
-                  <p className="mt-2 text-pretty text-base leading-relaxed text-brand-primary/70">
-                    I enjoy studying complex things, but I don&apos;t like when life feels
-                    complicated. So I build tools that make things simple, friendly, and easy to
-                    understand.
-                  </p>
-                </div>
+              <article className="h-full rounded-3xl border border-brand-secondary/40 bg-gradient-to-br from-brand-secondary/65 via-white to-[#dff2ff] p-5 shadow-[0_12px_36px_rgba(98,162,196,0.15)] md:p-6">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-brand-primary/45">
+                  Core Belief
+                </p>
+                <SoftParagraph className="mt-3 text-pretty text-base leading-relaxed text-brand-primary/72" delay={0.06}>
+                  I like studying complicated things, but I don&apos;t like when life feels
+                  complicated.
+                </SoftParagraph>
+                <SoftParagraph className="mt-3 text-pretty text-base leading-relaxed text-brand-primary/72" delay={0.1}>
+                  So I try to make things simple, friendly, and easy to understand.
+                </SoftParagraph>
 
-                <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-brand-secondary/45 bg-brand-secondary/20 px-3 py-1.5 text-xs font-medium tracking-wide text-brand-primary/75">
+                <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-brand-secondary/55 bg-white/50 px-3 py-1.5 text-xs font-medium tracking-wide text-brand-primary/75 backdrop-blur-sm">
                   Turning complexity into user-friendly tools
                 </div>
-              </article>
-            </Reveal>
-          </div>
-
-          <div className="mt-7 grid gap-6 md:grid-cols-2 md:gap-7">
-            <Reveal>
-              <article className="h-full rounded-3xl border border-black/[0.07] bg-white/85 p-5 shadow-[0_10px_32px_rgba(150,126,111,0.06)]">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-brand-primary/40">
-                  The Cat
-                </p>
-                <p className="mt-3 text-pretty text-sm leading-relaxed text-brand-primary/68">
-                  The name Friendly Cat Group comes from our Siamese cat. He&apos;s smart and
-                  independent—sometimes fierce, but always cute and affectionate in his own way.
-                </p>
-              </article>
-            </Reveal>
-
-            <Reveal>
-              <article className="h-full rounded-3xl border border-black/[0.07] bg-white/85 p-5 shadow-[0_10px_32px_rgba(150,126,111,0.06)]">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-brand-primary/40">
-                  Values
-                </p>
-                <p className="mt-3 text-pretty text-sm leading-relaxed text-brand-primary/68">
-                  Execution, creativity, persistence, and consistency support every step of our
-                  growth. Business is ultimately about people: understanding people, helping
-                  people, and becoming better people.
-                </p>
               </article>
             </Reveal>
           </div>

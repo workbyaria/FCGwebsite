@@ -211,15 +211,11 @@ export default function ProductsPage() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 md:mb-12">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-brand-primary/40">
-            Soft Tech Products
+            Products
           </p>
           <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-brand-primary md:text-6xl">
-            Clear tools for real-world decisions.
+            Simple, smart tools for consumers and professionals.
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-brand-primary/60 md:text-lg">
-            Two product lines. One design principle: keep complex things useful, calm, and easy
-            to understand.
-          </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2">

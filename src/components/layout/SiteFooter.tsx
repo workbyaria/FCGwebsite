@@ -34,14 +34,12 @@ const pages = [
   { href: "/solutions", label: "Solutions" },
   { href: "/about", label: "About" },
   { href: "/vision", label: "Vision" },
-  { href: "/impact", label: "Impact" },
 ] as const;
 
 const info = [
   { href: mailtoContact, label: "Contact" },
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms of use" },
-  { href: "/404", label: "404" },
 ] as const;
 
 export function SiteFooter() {
@@ -92,6 +90,15 @@ export function SiteFooter() {
               </p>
               <div className="mt-6 flex gap-3">
                 <a
+                  href="https://www.instagram.com/friendlycatgroup/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-white transition-opacity hover:opacity-85"
+                  aria-label="Instagram"
+                >
+                  <InstagramIcon className="h-4 w-4" />
+                </a>
+                <a
                   href="https://www.linkedin.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -108,15 +115,6 @@ export function SiteFooter() {
                   aria-label="X"
                 >
                   <XIcon className="h-4 w-4" />
-                </a>
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-white transition-opacity hover:opacity-85"
-                  aria-label="Instagram"
-                >
-                  <InstagramIcon className="h-4 w-4" />
                 </a>
               </div>
             </div>
