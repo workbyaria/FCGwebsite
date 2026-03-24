@@ -61,9 +61,8 @@ export default function AboutPage() {
                 </div>
 
                 <p className="text-pretty text-base leading-relaxed text-brand-primary/68">
-                  Friendly Cat Group started when I was a junior in college. At that time, I was
-                  reading lots of textbooks and writing papers every week. But deep down, I knew
-                  what I truly loved was sitting in front of my computer and making things.
+                  Friendly Cat Group started when I was a junior in college. But deep down, I
+                  knew what I truly loved was sitting in front of my computer and making things.
                 </p>
                 <p className="mt-4 text-pretty text-base leading-relaxed text-brand-primary/68">
                   I have always enjoyed turning random ideas in my head into real visions.
@@ -86,10 +85,6 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <p className="text-pretty text-base leading-relaxed text-brand-primary/68">
-                  That moment when someone says, &quot;Oh... this makes sense now,&quot; gives me a
-                  ton of happiness and a real sense of accomplishment.
-                </p>
                 <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-brand-secondary/45 bg-brand-secondary/20 px-3 py-1.5 text-xs font-medium tracking-wide text-brand-primary/75">
                   Turning complexity into user-friendly tools
                 </div>
@@ -97,7 +92,7 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <div className="mt-7 grid gap-6 md:grid-cols-3 md:gap-7">
+          <div className="mt-7 grid gap-6 md:grid-cols-2 md:gap-7">
             <Reveal>
               <article className="h-full rounded-3xl border border-black/[0.07] bg-white/85 p-5 shadow-[0_10px_32px_rgba(150,126,111,0.06)]">
                 <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-brand-primary/40">
@@ -106,19 +101,6 @@ export default function AboutPage() {
                 <p className="mt-3 text-pretty text-sm leading-relaxed text-brand-primary/68">
                   The name Friendly Cat Group comes from our Siamese cat. He&apos;s smart and
                   independent—sometimes fierce, but always cute and affectionate in his own way.
-                </p>
-              </article>
-            </Reveal>
-
-            <Reveal>
-              <article className="h-full rounded-3xl border border-black/[0.07] bg-white/85 p-5 shadow-[0_10px_32px_rgba(150,126,111,0.06)]">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-brand-primary/40">
-                  Why This Name
-                </p>
-                <p className="mt-3 text-pretty text-sm leading-relaxed text-brand-primary/68">
-                  At first, it was a joke. Later, I realized it reflects what I believe in: a
-                  company that stays kind to people, animals, and the world—even when things get
-                  competitive and complicated.
                 </p>
               </article>
             </Reveal>
@@ -143,7 +125,7 @@ export default function AboutPage() {
                 Friendly Cat Group
               </p>
               <p className="mt-2 text-xl font-semibold tracking-tight text-brand-primary md:text-2xl">
-                That is how Friendly Cat Group was born.
+                Founded in March 2026.
               </p>
             </div>
           </Reveal>

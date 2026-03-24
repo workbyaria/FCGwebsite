@@ -53,7 +53,7 @@ export function SiteFooter() {
       <div className="bg-brand-secondary/10 px-6 py-12 md:py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-brand-primary md:text-4xl">
-            Simplify complexity together
+            Get started
           </h2>
           <p className="mt-4 text-base text-brand-primary/55 md:text-lg">
             From ready-to-use SaaS products to fully customized digital systems — we help
