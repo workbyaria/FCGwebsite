@@ -43,6 +43,9 @@ const TOOLS: Tool[] = [
       "BuyCalc turns price, usage cycle, and utility into a simple value score. It is designed to reduce impulse buying and make comparison easier for everyday shoppers.",
     accent: "from-[#E8DDD1] to-[#B9EAFF]",
     badge: "BC",
+    logoSrc: "/logos/buycalc-logo.png",
+    logoBgClass: "bg-white",
+    logoFit: "contain",
   },
   {
     id: "nailcalc",
