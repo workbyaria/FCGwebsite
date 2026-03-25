@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMemo, useState } from "react";
+import { IphoneAppFolderShowcase } from "@/components/products/IphoneAppFolderShowcase";
 
 type Tool = {
   id: string;
@@ -217,6 +218,8 @@ export default function ProductsPage() {
             Simple, smart tools for consumers and professionals.
           </h1>
         </div>
+
+        <IphoneAppFolderShowcase tools={TOOLS} />
 
         <div className="grid gap-5 md:grid-cols-2">
           <CategorySection
