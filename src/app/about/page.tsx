@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { Reveal } from "@/components/motion/Reveal";
 
 export default function AboutPage() {
   const ease = [0.25, 0.1, 0.25, 1] as const;
+  const [activeBrand, setActiveBrand] = useState<"bomb" | "alune" | null>(null);
 
   function SoftParagraph({
     children,
@@ -110,6 +112,149 @@ export default function AboutPage() {
                 <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-brand-secondary/55 bg-white/50 px-3 py-1.5 text-xs font-medium tracking-wide text-brand-primary/75 backdrop-blur-sm">
                   Turning complexity into user-friendly tools
                 </div>
+              </article>
+            </Reveal>
+          </div>
+
+          <Reveal className="mt-8">
+            <article className="rounded-3xl border border-black/[0.07] bg-white/80 p-5 shadow-[0_12px_36px_rgba(150,126,111,0.08)] backdrop-blur-sm md:p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-brand-primary/45">
+                FCG Story
+              </p>
+
+              <SoftParagraph
+                className="mt-3 text-pretty text-base leading-relaxed text-brand-primary/72"
+                delay={0.06}
+              >
+                We build across digital and physical worlds.
+              </SoftParagraph>
+
+              <SoftParagraph
+                className="mt-3 text-pretty text-base leading-relaxed text-brand-primary/72"
+                delay={0.11}
+              >
+                From servers to restaurants and retail brands, we turn ideas into
+                real products that make everyday life smarter and better.
+              </SoftParagraph>
+            </article>
+          </Reveal>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <Reveal>
+              <article className="rounded-3xl border border-black/[0.07] bg-white/80 p-5 shadow-[0_12px_36px_rgba(150,126,111,0.08)] backdrop-blur-sm md:p-6">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setActiveBrand((prev) => (prev === "bomb" ? null : "bomb"))
+                  }
+                  className="w-full text-left"
+                  aria-expanded={activeBrand === "bomb"}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white ring-1 ring-black/5">
+                      <Image
+                        src="/logos/bomb-hot-dog-logo.png"
+                        alt="Bomb Hot Dog logo"
+                        width={84}
+                        height={84}
+                        className="h-12 w-12 object-contain"
+                      />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-semibold tracking-tight text-brand-primary">
+                        Bomb Hot Dog
+                      </p>
+                      <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-brand-primary/40">
+                        @bombhotdog
+                      </p>
+                    </div>
+                  </div>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {activeBrand === "bomb" ? (
+                    <motion.div
+                      key="bomb-instagram"
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.25, ease }}
+                      className="mt-4 rounded-2xl border border-brand-secondary/55 bg-white/50 p-3 backdrop-blur-sm"
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-primary/45">
+                        Instagram
+                      </p>
+                      <a
+                        href="https://www.instagram.com/bombhotdog/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-2 inline-flex w-full items-center justify-between gap-3 rounded-xl bg-brand-primary/10 px-3 py-2 text-sm font-semibold text-brand-primary/90 ring-1 ring-black/5 transition-colors hover:bg-brand-primary/15"
+                      >
+                        <span>@bombhotdog</span>
+                        <span aria-hidden className="text-brand-primary/60">{'->'}</span>
+                      </a>
+                    </motion.div>
+                  ) : null}
+                </AnimatePresence>
+              </article>
+            </Reveal>
+
+            <Reveal>
+              <article className="rounded-3xl border border-black/[0.07] bg-white/80 p-5 shadow-[0_12px_36px_rgba(150,126,111,0.08)] backdrop-blur-sm md:p-6">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setActiveBrand((prev) => (prev === "alune" ? null : "alune"))
+                  }
+                  className="w-full text-left"
+                  aria-expanded={activeBrand === "alune"}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white ring-1 ring-black/5">
+                      <Image
+                        src="/logos/alune-active-logo.png"
+                        alt="Alune Active logo"
+                        width={84}
+                        height={84}
+                        className="h-12 w-12 object-contain"
+                      />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-semibold tracking-tight text-brand-primary">
+                        Alune Active
+                      </p>
+                      <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-brand-primary/40">
+                        @alune_active
+                      </p>
+                    </div>
+                  </div>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {activeBrand === "alune" ? (
+                    <motion.div
+                      key="alune-instagram"
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.25, ease }}
+                      className="mt-4 rounded-2xl border border-brand-secondary/55 bg-white/50 p-3 backdrop-blur-sm"
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-primary/45">
+                        Instagram
+                      </p>
+                      <a
+                        href="https://www.instagram.com/alune_active/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-2 inline-flex w-full items-center justify-between gap-3 rounded-xl bg-brand-primary/10 px-3 py-2 text-sm font-semibold text-brand-primary/90 ring-1 ring-black/5 transition-colors hover:bg-brand-primary/15"
+                      >
+                        <span>@alune_active</span>
+                        <span aria-hidden className="text-brand-primary/60">{'->'}</span>
+                      </a>
+                    </motion.div>
+                  ) : null}
+                </AnimatePresence>
               </article>
             </Reveal>
           </div>

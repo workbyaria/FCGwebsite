@@ -14,8 +14,46 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Friendly Cat Group",
-  description: "Technology for Humanity.",
+  metadataBase:
+    process.env.NEXT_PUBLIC_SITE_URL != null &&
+    process.env.NEXT_PUBLIC_SITE_URL !== ""
+      ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
+      : undefined,
+  title: {
+    default: "Friendly Cat Group",
+    template: "%s · Friendly Cat Group",
+  },
+  description:
+    "Friendly Cat Group builds calm, practical technology — tools for consumers and professionals.",
+  keywords: [
+    "Friendly Cat Group",
+    "software",
+    "apps",
+    "technology",
+    "wellness",
+  ],
+  icons: {
+    icon: [{ url: "/fcg-logo.png", type: "image/png", sizes: "any" }],
+    apple: [{ url: "/fcg-logo.png", type: "image/png" }],
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Friendly Cat Group",
+    title: "Friendly Cat Group",
+    description:
+      "Friendly Cat Group builds calm, practical technology — tools for consumers and professionals.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Friendly Cat Group",
+    description:
+      "Friendly Cat Group builds calm, practical technology — tools for consumers and professionals.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

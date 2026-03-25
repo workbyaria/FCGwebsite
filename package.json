@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "cross-env __NEXT_DEVTOOL_SEGMENT_EXPLORER=0 next dev",
+    "clean:next": "node -e \"try{require('fs').rmSync('.next',{recursive:true,force:true})}catch(e){}\"",
     "dev:clean": "powershell -NoProfile -Command \"Get-NetTCPConnection -State Listen -LocalPort 3000,3001 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }; $env:__NEXT_DEVTOOL_SEGMENT_EXPLORER='0'; next dev\"",
+    "dev:reset": "npm run clean:next && npm run dev:clean",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
