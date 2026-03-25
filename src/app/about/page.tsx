@@ -52,7 +52,7 @@ export default function AboutPage() {
               Friendly Cat Group
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-brand-primary/60 md:text-lg">
-              We build technology tools, while also supporting sustainability and charity.
+              From server to physical stores. We build across digital and physical worlds.
             </p>
           </Reveal>
 
@@ -78,20 +78,16 @@ export default function AboutPage() {
                 </div>
 
                 <SoftParagraph className="text-pretty text-base leading-relaxed text-brand-primary/68" delay={0.03}>
-                  Friendly Cat Group started when I was a junior in college.
-                </SoftParagraph>
-                <SoftParagraph className="mt-4 text-pretty text-base leading-relaxed text-brand-primary/68" delay={0.08}>
-                  But deep inside, I knew what I loved was sitting in front of my computer and
-                  creating things.
+                  Friendly Cat Group started when our founder and CEO was a junior in college.
                 </SoftParagraph>
                 <SoftParagraph className="mt-4 text-pretty text-base leading-relaxed text-brand-primary/68" delay={0.13}>
-                  I have always enjoyed turning random ideas in my head into real visions.
+                  She has always loved turning random ideas in her head into real visions.
                 </SoftParagraph>
                 <SoftParagraph className="mt-4 text-pretty text-base leading-relaxed text-brand-primary/68" delay={0.18}>
-                  Sometimes they become paintings or physical products.
+                  Sometimes they are paintings or physical products.
                 </SoftParagraph>
                 <SoftParagraph className="mt-4 text-pretty text-base leading-relaxed text-brand-primary/68" delay={0.23}>
-                  Sometimes they turn into small tools that help people solve everyday problems.
+                  Sometimes they are small tools that help people solve problems.
                 </SoftParagraph>
               </article>
             </Reveal>
@@ -102,11 +98,11 @@ export default function AboutPage() {
                   Core Belief
                 </p>
                 <SoftParagraph className="mt-3 text-pretty text-base leading-relaxed text-brand-primary/72" delay={0.06}>
-                  I like studying complicated things, but I don&apos;t like when life feels
+                  &quot;I like studying complicated things, but I don&apos;t like when life feels
                   complicated.
                 </SoftParagraph>
                 <SoftParagraph className="mt-3 text-pretty text-base leading-relaxed text-brand-primary/72" delay={0.1}>
-                  So I try to make things simple, friendly, and easy to understand.
+                  So I try to make things simple, friendly, and easy to understand.&quot;
                 </SoftParagraph>
 
                 <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-brand-secondary/55 bg-white/50 px-3 py-1.5 text-xs font-medium tracking-wide text-brand-primary/75 backdrop-blur-sm">
