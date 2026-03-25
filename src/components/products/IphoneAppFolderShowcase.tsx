@@ -102,7 +102,7 @@ export function IphoneAppFolderShowcase({ tools }: { tools: FolderShowcaseTool[]
 
   return (
     <section
-      className="mb-12 md:mb-14"
+      className="mb-20 md:mb-24"
       aria-labelledby={labelId}
     >
       <p

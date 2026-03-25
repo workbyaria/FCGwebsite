@@ -116,28 +116,18 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <Reveal className="mt-8">
-            <article className="rounded-3xl border border-black/[0.07] bg-white/80 p-5 shadow-[0_12px_36px_rgba(150,126,111,0.08)] backdrop-blur-sm md:p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-brand-primary/45">
-                FCG Story
-              </p>
-
-              <SoftParagraph
-                className="mt-3 text-pretty text-base leading-relaxed text-brand-primary/72"
-                delay={0.06}
-              >
+          {/* Same typographic treatment as home “The Essence” tagline; left-aligned */}
+          <section className="mt-20 md:mt-28" aria-label="FCG story">
+            <Reveal className="max-w-5xl text-left" y={16}>
+              <p className="text-balance text-2xl font-extralight leading-snug tracking-tight text-brand-primary/22 md:text-4xl md:tracking-tighter">
                 We build across digital and physical worlds.
-              </SoftParagraph>
-
-              <SoftParagraph
-                className="mt-3 text-pretty text-base leading-relaxed text-brand-primary/72"
-                delay={0.11}
-              >
+              </p>
+              <p className="mt-5 text-balance text-2xl font-extralight leading-snug tracking-tight text-brand-primary/22 md:text-4xl md:tracking-tighter">
                 From servers to restaurants and retail brands, we turn ideas into
                 real products that make everyday life smarter and better.
-              </SoftParagraph>
-            </article>
-          </Reveal>
+              </p>
+            </Reveal>
+          </section>
 
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             <Reveal>
