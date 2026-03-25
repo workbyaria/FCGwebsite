@@ -25,7 +25,7 @@ const TOOLS: Tool[] = [
     id: "spinmeal",
     name: "SpinMeal",
     category: "Consumer Tools",
-    blurb: "Instant meal ideas, built for daily decision fatigue.",
+    blurb: "A meal wheel that randomly picks from your customized choices when you can't decide what to eat.",
     details:
       "SpinMeal helps users decide what to eat in seconds. It combines preference presets, quick randomization, and practical suggestions so dinner planning feels lighter.",
     accent: "from-[#B9EAFF] to-[#E8DDD1]",
@@ -38,7 +38,7 @@ const TOOLS: Tool[] = [
     id: "buycalc",
     name: "BuyCalc",
     category: "Consumer Tools",
-    blurb: "A friendly spending calculator for smarter personal choices.",
+    blurb: "Turns prices into time cost to support smarter personal spending.",
     details:
       "BuyCalc turns price, usage cycle, and utility into a simple value score. It is designed to reduce impulse buying and make comparison easier for everyday shoppers.",
     accent: "from-[#E8DDD1] to-[#B9EAFF]",
@@ -51,7 +51,7 @@ const TOOLS: Tool[] = [
     id: "nailcalc",
     name: "NailCalc",
     category: "Professional Tools",
-    blurb: "Pricing and workload clarity for nail service professionals.",
+    blurb: "Service pricing, receipt generation, and income tracking for nail professionals.",
     details:
       "NailCalc helps nail artists estimate service pricing from time, materials, and complexity. It supports consistent quotations and healthier scheduling.",
     accent: "from-[#CFEFFE] to-[#F5F2ED]",
@@ -62,7 +62,7 @@ const TOOLS: Tool[] = [
     id: "lashcalc",
     name: "LashCalc",
     category: "Professional Tools",
-    blurb: "Service planning and quote support for lash technicians.",
+    blurb: "Service pricing, receipt generation, and income tracking for lash technicians.",
     details:
       "LashCalc provides structured pricing guidance for lash extensions and maintenance sessions. It helps teams standardize communication and improve booking confidence.",
     accent: "from-[#F5F2ED] to-[#DDEFFC]",
