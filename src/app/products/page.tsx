@@ -14,6 +14,10 @@ type Tool = {
   accent: string;
   badge: string;
   logoSrc?: string;
+  /** Optional container bg when using logo image (default matches NailCalc) */
+  logoBgClass?: string;
+  /** Use "contain" for circular / non-square marks */
+  logoFit?: "cover" | "contain";
 };
 
 const TOOLS: Tool[] = [
@@ -26,6 +30,9 @@ const TOOLS: Tool[] = [
       "SpinMeal helps users decide what to eat in seconds. It combines preference presets, quick randomization, and practical suggestions so dinner planning feels lighter.",
     accent: "from-[#B9EAFF] to-[#E8DDD1]",
     badge: "SM",
+    logoSrc: "/logos/spinmeal-logo.png",
+    logoBgClass: "bg-[#FDFBF8]",
+    logoFit: "contain",
   },
   {
     id: "buycalc",
@@ -65,21 +72,31 @@ function AppLogo({
   accent,
   logoSrc,
   name,
+  logoBgClass,
+  logoFit = "cover",
 }: {
   badge: string;
   accent: string;
   logoSrc?: string;
   name: string;
+  logoBgClass?: string;
+  logoFit?: "cover" | "contain";
 }) {
   if (logoSrc) {
     return (
-      <div className="grid h-12 w-12 place-items-center overflow-hidden rounded-2xl bg-[#967E6F] ring-1 ring-black/5">
+      <div
+        className={`grid h-12 w-12 place-items-center overflow-hidden rounded-2xl ring-1 ring-black/5 ${logoBgClass ?? "bg-[#967E6F]"}`}
+      >
         <Image
           src={logoSrc}
           alt={`${name} logo`}
           width={48}
           height={48}
-          className="h-full w-full object-cover"
+          className={
+            logoFit === "contain"
+              ? "h-full w-full object-contain p-0.5"
+              : "h-full w-full object-cover"
+          }
         />
       </div>
     );
@@ -121,6 +138,8 @@ function ToolCard({
             accent={tool.accent}
             logoSrc={tool.logoSrc}
             name={tool.name}
+            logoBgClass={tool.logoBgClass}
+            logoFit={tool.logoFit}
           />
           <div className="min-w-0 flex-1">
             <div className="flex items-center justify-between gap-2">

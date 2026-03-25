@@ -10,6 +10,8 @@ export type FolderShowcaseTool = {
   badge: string;
   accent: string;
   logoSrc?: string;
+  logoBgClass?: string;
+  logoFit?: "cover" | "contain";
 };
 
 const PLACEHOLDER_LABELS = ["Soon", "Soon", "Soon", "Soon", "Soon"] as const;
@@ -26,9 +28,11 @@ function SquircleIcon({
   const textSize = size === "micro" ? "text-[7px]" : "text-[11px]";
 
   if (tool.logoSrc) {
+    const fit = tool.logoFit ?? "cover";
+    const bg = tool.logoBgClass ?? "bg-[#967E6F]";
     return (
       <div
-        className={`grid shrink-0 place-items-center overflow-hidden bg-[#967E6F] ring-1 ring-black/[0.06] ${rounded}`}
+        className={`grid shrink-0 place-items-center overflow-hidden ring-1 ring-black/[0.06] ${rounded} ${bg}`}
         style={{ width: px, height: px }}
       >
         <Image
@@ -36,7 +40,11 @@ function SquircleIcon({
           alt=""
           width={px}
           height={px}
-          className="h-full w-full object-cover"
+          className={
+            fit === "contain"
+              ? "h-full w-full object-contain p-px"
+              : "h-full w-full object-cover"
+          }
         />
       </div>
     );
