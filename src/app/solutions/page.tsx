@@ -3,25 +3,21 @@ import { Reveal } from "@/components/motion/Reveal";
 const SOLUTIONS = [
   {
     title: "Simplifying Daily Decisions",
-    body: "We design tools that reduce mental load and help people make clearer choices.",
     tags: ["SpinMeal", "BuyCalc"],
     accent: "from-[#B9EAFF]/70 via-white to-[#E8DDD1]/60",
   },
   {
     title: "Empowering Small Businesses",
-    body: "We build lightweight SaaS systems that help service businesses run smarter.",
     tags: ["NailCalc", "LashCalc"],
     accent: "from-[#E8DDD1]/75 via-white to-[#B9EAFF]/45",
   },
   {
     title: "AI-Driven Productivity",
-    body: "We create user-friendly AI tools that transform complex workflows into simple actions.",
     tags: ["Workflow AI", "Automation Layer"],
     accent: "from-[#DDF3FF]/80 via-white to-[#F2E9E1]/65",
   },
   {
     title: "Wellness Through Technology",
-    body: "We believe digital tools can support emotional clarity, routine building, and self-awareness.",
     tags: ["Clarity", "Routine", "Self-awareness"],
     accent: "from-[#F6EFE8]/85 via-white to-[#DCEFFF]/55",
   },
@@ -61,9 +57,6 @@ export default function SolutionsPage() {
                   <h2 className="text-balance text-2xl font-semibold tracking-tight text-brand-primary md:text-[1.85rem]">
                     {item.title}
                   </h2>
-                  <p className="mt-3 max-w-3xl text-base leading-relaxed text-brand-primary/65">
-                    {item.body}
-                  </p>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
@@ -76,10 +69,6 @@ export default function SolutionsPage() {
                     </span>
                   ))}
                 </div>
-
-                <p className="mt-4 text-xs uppercase tracking-[0.15em] text-brand-primary/35">
-                  Solution Layer {idx + 1}
-                </p>
               </article>
             </Reveal>
           ))}

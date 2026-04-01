@@ -54,8 +54,7 @@ export function SiteFooter() {
             Get started
           </h2>
           <p className="mt-4 text-base text-brand-primary/55 md:text-lg">
-            From ready-to-use SaaS products to fully customized digital systems — we help
-            businesses simplify operations and solve real problems.
+            From ready-to-use SaaS products to fully customized digital systems for your business.
           </p>
           <div className="mt-8">
             <Link
