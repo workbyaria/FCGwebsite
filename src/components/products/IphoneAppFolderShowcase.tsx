@@ -109,7 +109,7 @@ export function IphoneAppFolderShowcase({ tools }: { tools: FolderShowcaseTool[]
         id={labelId}
         className="mb-5 text-center text-sm text-brand-primary/50"
       >
-        Tap the folder — like on iPhone.
+        Tap the folder, like on your iPhone.
       </p>
 
       <div className="mx-auto flex max-w-[min(100%,320px)] justify-center">

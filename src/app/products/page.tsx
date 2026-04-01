@@ -25,9 +25,9 @@ const TOOLS: Tool[] = [
     id: "spinmeal",
     name: "SpinMeal",
     category: "Consumer Tools",
-    blurb: "A meal wheel that randomly picks from your customized choices when you can't decide what to eat.",
+    blurb: "Randomly picks from customized choices when you can't decide what to eat.",
     details:
-      "SpinMeal helps users decide what to eat in seconds. It combines preference presets, quick randomization, and practical suggestions so dinner planning feels lighter.",
+      "SpinMeal helps users decide what to eat in seconds.",
     accent: "from-[#B9EAFF] to-[#E8DDD1]",
     badge: "SM",
     logoSrc: "/logos/spinmeal-logo.png",
@@ -40,7 +40,7 @@ const TOOLS: Tool[] = [
     category: "Consumer Tools",
     blurb: "Turns prices into time cost to support smarter personal spending.",
     details:
-      "BuyCalc turns price, usage cycle, and utility into a simple value score. It is designed to reduce impulse buying and make comparison easier for everyday shoppers.",
+      "BuyCalc turns price, usage cycle, and utility into a simple value score. Designed to reduce impulse buying. ",
     accent: "from-[#E8DDD1] to-[#B9EAFF]",
     badge: "BC",
     logoSrc: "/logos/buycalc-logo.png",
@@ -48,12 +48,23 @@ const TOOLS: Tool[] = [
     logoFit: "contain",
   },
   {
+    id: "voiceplan",
+    name: "VoicePlan",
+    category: "Consumer Tools",
+    blurb:
+      "Speak or type in your plan, AI will organize your calendars, to-dos.",
+    details:
+      "The less you structure, the better: use voice or text, and AI sorts what you mean into calendars, to-dos, shopping lists, and more.",
+    accent: "from-[#DDEFFC] to-[#E8DDD1]",
+    badge: "VP",
+  },
+  {
     id: "nailcalc",
     name: "NailCalc",
     category: "Professional Tools",
     blurb: "Service pricing, receipt generation, and income tracking for nail professionals.",
     details:
-      "NailCalc helps nail artists estimate service pricing from time, materials, and complexity. It supports consistent quotations and healthier scheduling.",
+      "Generate receipts in seconds for your nail salon.",
     accent: "from-[#CFEFFE] to-[#F5F2ED]",
     badge: "NC",
     logoSrc: "/logos/nailcalc-logo.png",
@@ -64,7 +75,7 @@ const TOOLS: Tool[] = [
     category: "Professional Tools",
     blurb: "Service pricing, receipt generation, and income tracking for lash technicians.",
     details:
-      "LashCalc provides structured pricing guidance for lash extensions and maintenance sessions. It helps teams standardize communication and improve booking confidence.",
+      "Generate receipts in seconds for your lash salon.",
     accent: "from-[#F5F2ED] to-[#DDEFFC]",
     badge: "LC",
   },
