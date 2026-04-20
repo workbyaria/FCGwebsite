@@ -96,9 +96,9 @@ export function IphoneAppFolderShowcase({ tools }: { tools: FolderShowcaseTool[]
     return () => window.removeEventListener("keydown", onKey);
   }, [open, close]);
 
-  const spring = reduceMotion
+  const folderTransition = reduceMotion
     ? { duration: 0.01 }
-    : { type: "spring" as const, stiffness: 420, damping: 34, mass: 0.85 };
+    : { duration: 0.24, ease: [0.25, 0.1, 0.25, 1] as const };
 
   return (
     <section
@@ -184,10 +184,10 @@ export function IphoneAppFolderShowcase({ tools }: { tools: FolderShowcaseTool[]
                   />
 
                   <motion.div
-                    initial={reduceMotion ? false : { scale: 0.88, opacity: 0, y: 24 }}
-                    animate={{ scale: 1, opacity: 1, y: 0 }}
-                    exit={reduceMotion ? undefined : { scale: 0.92, opacity: 0, y: 16 }}
-                    transition={spring}
+                    initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={reduceMotion ? undefined : { opacity: 0, y: 10 }}
+                    transition={folderTransition}
                     className="relative z-10 m-auto flex w-[min(92%,260px)] max-h-[78%] flex-col rounded-[1.85rem] border border-white/55 bg-white/78 p-4 shadow-[0_24px_70px_rgba(30,28,26,0.22)] backdrop-blur-2xl"
                   >
                     <div className="mb-3 flex items-center justify-between gap-2">
@@ -203,12 +203,12 @@ export function IphoneAppFolderShowcase({ tools }: { tools: FolderShowcaseTool[]
                       </button>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-x-3 gap-y-4 overflow-y-auto pb-1 pt-1 [scrollbar-width:thin]">
+                    <div className="grid grid-cols-3 gap-x-3 gap-y-4 overflow-x-hidden overflow-y-scroll pb-1 pt-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
                       {tools.map((t, i) => (
                         <motion.div
                           key={t.id}
-                          initial={reduceMotion ? false : { opacity: 0, y: 8 }}
-                          animate={{ opacity: 1, y: 0 }}
+                          initial={reduceMotion ? false : { opacity: 0 }}
+                          animate={{ opacity: 1 }}
                           transition={{
                             delay: reduceMotion ? 0 : 0.04 + i * 0.035,
                             duration: reduceMotion ? 0.01 : 0.25,
@@ -225,8 +225,8 @@ export function IphoneAppFolderShowcase({ tools }: { tools: FolderShowcaseTool[]
                       {PLACEHOLDER_LABELS.map((_, i) => (
                         <motion.div
                           key={`g-${i}`}
-                          initial={reduceMotion ? false : { opacity: 0, y: 8 }}
-                          animate={{ opacity: 1, y: 0 }}
+                          initial={reduceMotion ? false : { opacity: 0 }}
+                          animate={{ opacity: 1 }}
                           transition={{
                             delay: reduceMotion ? 0 : 0.12 + (tools.length + i) * 0.03,
                             duration: reduceMotion ? 0.01 : 0.25,

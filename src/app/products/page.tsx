@@ -8,7 +8,7 @@ import { IphoneAppFolderShowcase } from "@/components/products/IphoneAppFolderSh
 type Tool = {
   id: string;
   name: string;
-  category: "Consumer Tools" | "Professional Tools";
+  category: "Consumer Tools" | "Professional Tools" | "AI Agent Solutions";
   blurb: string;
   details: string;
   accent: string;
@@ -78,6 +78,26 @@ const TOOLS: Tool[] = [
       "Generate receipts in seconds for your lash salon.",
     accent: "from-[#F5F2ED] to-[#DDEFFC]",
     badge: "LC",
+  },
+  {
+    id: "agent-custom-setup",
+    name: "Custom Agent Setup Package",
+    category: "AI Agent Solutions",
+    blurb: "End-to-end setup package tailored to your tools, data, and business flow.",
+    details:
+      "We configure AI agent workflows around your stack and operating process, then deploy practical automations with clear guardrails.",
+    accent: "from-[#DFF2FF] to-[#EFE6DA]",
+    badge: "CP",
+  },
+  {
+    id: "agent-output-templates",
+    name: "Templates",
+    category: "AI Agent Solutions",
+    blurb: "Output templates designed for consistent, production-ready agent responses.",
+    details:
+      "A template library focused on AI agent outputs, including structured formats for reports, summaries, follow-ups, and operational handoffs.",
+    accent: "from-[#E8DDD1] to-[#B9EAFF]",
+    badge: "TP",
   },
 ];
 
@@ -202,13 +222,17 @@ function CategorySection({
   expandedId: string | null;
   onToggle: (id: string) => void;
 }) {
+  const itemLabel = title === "AI Agent Solutions" ? "solutions" : "apps";
+
   return (
     <section className="rounded-[1.5rem] border border-black/[0.07] bg-brand-canvas/65 p-4 md:p-5">
       <div className="mb-4 flex items-center justify-between">
         <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-brand-primary/55">
           {title}
         </h2>
-        <span className="text-xs text-brand-primary/35">{items.length} apps</span>
+        <span className="text-xs text-brand-primary/35">
+          {items.length} {itemLabel}
+        </span>
       </div>
       <div className="space-y-3">
         {items.map((tool) => (
@@ -235,6 +259,10 @@ export default function ProductsPage() {
     () => TOOLS.filter((t) => t.category === "Professional Tools"),
     []
   );
+  const aiAgents = useMemo(
+    () => TOOLS.filter((t) => t.category === "AI Agent Solutions"),
+    []
+  );
 
   const toggle = (id: string) => {
     setExpandedId((prev) => (prev === id ? null : id));
@@ -250,11 +278,18 @@ export default function ProductsPage() {
           <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-brand-primary md:text-6xl">
             Simple, smart tools for consumers and professionals.
           </h1>
+          <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-brand-secondary/55 bg-white/70 px-3 py-1.5 text-xs font-medium tracking-wide text-brand-primary/70">
+            <span>B2C Mobile APP</span>
+            <span aria-hidden>•</span>
+            <span>B2B Systems</span>
+            <span aria-hidden>•</span>
+            <span>AI Agents</span>
+          </div>
         </div>
 
         <IphoneAppFolderShowcase tools={TOOLS} />
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           <CategorySection
             title="Consumer Tools"
             items={consumer}
@@ -264,6 +299,12 @@ export default function ProductsPage() {
           <CategorySection
             title="Professional Tools"
             items={professional}
+            expandedId={expandedId}
+            onToggle={toggle}
+          />
+          <CategorySection
+            title="AI Agent Solutions"
+            items={aiAgents}
             expandedId={expandedId}
             onToggle={toggle}
           />
